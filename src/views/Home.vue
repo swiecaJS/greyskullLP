@@ -1,10 +1,4 @@
 <template>
-  <!-- <v-parallax
-    height="600"
-    :src="require('../assets/bg.jpg')"
-  >
-    <h1>Greyskull</h1>
-  </v-parallax> -->
   <v-container fluid class="home" dark>
     <TheHomeSection />
   </v-container>
