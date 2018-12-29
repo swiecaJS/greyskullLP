@@ -38,6 +38,14 @@ export default new Router({
       component: () => import(/* webpackChunkName: "about" */ './views/Overview.vue')
     },
     {
+      path: '/strength',
+      name: 'strength',
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import(/* webpackChunkName: "about" */ './views/StrengthProgess.vue')
+    },
+    {
       path: '/todays-workout',
       name: `today's workour`,
       // route level code-splitting

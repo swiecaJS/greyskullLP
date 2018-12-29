@@ -13,8 +13,67 @@ export default {
   results: [
     {
       id: 'bench',
-      loads: [],
-      reps: []
+      name: 'Wyciskanie leżąc',
+      data: [
+        {
+          reps: 21,
+          load: 40
+        },
+        {
+          reps: 16,
+          load: 45
+        },
+        {
+          reps: 20,
+          load: 46
+        }
+      ]
+    },
+    {
+      id: 'squat',
+      name: 'Przysiad',
+      data: [
+        {
+          reps: 21,
+          load: 40
+        },
+        {
+          reps: 16,
+          load: 45
+        },
+        {
+          reps: 20,
+          load: 46
+        }
+      ]
+    },
+    {
+      id: 'deadlift',
+      name: 'Martwy ciąg',
+      data: [
+        {
+          reps: 15,
+          load: 60
+        },
+        {
+          reps: 17,
+          load: 62.5
+        }
+      ]
+    },
+    {
+      id: 'ohp',
+      name: 'Wyciskanie żołnierskie',
+      data: [
+        {
+          reps: 13,
+          load: 25
+        },
+        {
+          reps: 16,
+          load: 26
+        }
+      ]
     }
   ],
   currentWorkoutId: 1,
