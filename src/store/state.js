@@ -10,6 +10,13 @@ export default {
     ohp: 30,
     facepull: 0
   },
+  results: [
+    {
+      id: 'bench',
+      loads: [],
+      reps: []
+    }
+  ],
   currentWorkoutId: 1,
   workouts: [
     {
@@ -36,6 +43,13 @@ export default {
           lastSeriesAMRAP: false,
           series: ['8', '8', '8'],
           seriesInfo: '3x6-8'
+        },
+        {
+          name: 'Uginanie sztangi na biceps',
+          excerciseKey: 'bicep',
+          lastSeriesAMRAP: false,
+          series: ['12', '12', '12'],
+          seriesInfo: '3x10-12'
         }
       ]
     }
