@@ -1,10 +1,9 @@
 <template>
   <v-layout align-center justify-center column fill-height class="home-section">
-    <h1>Greskull Lp</h1>
-    <h3>najlepszy plan FBW dla początkujących</h3>
+    <h1 class="display-3 ">Greskull Lp</h1>
+    <h3 class="title">najlepszy plan FBW dla początkujących</h3>
     <section class="cta-buttons">
-      <v-btn color="success">Login</v-btn>
-      <v-btn color="info">Sign Up</v-btn>
+      <v-btn @click="$router.push('/info')" color="info">Info</v-btn>
     </section>
   </v-layout>
 </template>

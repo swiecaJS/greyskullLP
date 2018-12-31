@@ -1,0 +1,28 @@
+<template>
+  <v-container fluid>
+    <h2 class="title mb-2">Informacje</h2>
+    <p
+      class="body-1"
+    >Ta aplikacja ma ułatwiać trening Greyskull LP, którego autorem jest Adam Śmigielski – Full Borsuk Workout na podstawie “The Greyskull LP. Third Edition” (Johnny Pain)</p>
+    <p class="body-1">Dokładny opis planu znajdziesz
+      <a
+        href="https://docs.google.com/document/d/1hbbJ1mgfxwV9aQ4bVM_W_yTHcuyUToUGQaakXQpIluk/edit#"
+        target="_blank"
+        rel="noopener noreferrer"
+      >tutaj</a>
+    </p>
+    <v-divider></v-divider>
+    <p class="body-1 mt-2">projekt open-source stworzony przez swiecaJS, zapraszam do kontrybucji
+      <a
+        href="https://github.com/swiecaJS/greyskullLP"
+        target="_blank"
+        rel="noopener noreferrer"
+      >tutaj</a> ;)
+    </p>
+    <v-divider></v-divider>
+    <p class="mt-2">Jesteś gotowy?</p>
+    <v-layout row wrap justify-center align-center class="font-weight-light starting-load">
+      <v-btn @click="$router.push('/settings')" color="info">Przejdź do ustawień</v-btn>
+    </v-layout>
+  </v-container>
+</template>

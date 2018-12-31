@@ -1,7 +1,7 @@
 <template>
 <section>
   <h2 class="headline text-xs-center pt-4">Progres siłowy</h2>
-  <p content-class="text-xs-center body-1">Maksymalne obciążenie na 1 powtórzenie</p>
+  <p content-class="text-xs-center body-1">Teoretyczne maksymalne obciążenie na 1 powtórzenie</p>
   <ProgressChart 
     v-for="result in results"
     :key="result.id"
@@ -13,6 +13,7 @@
 </template>
 
 <script>
+//   <v-container fluid> dodaj
 import { mapState } from 'vuex'
 import ProgressChart from '../components/progress/ProgressChart.vue'
 export default {

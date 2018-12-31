@@ -1,15 +1,10 @@
 <template>
   <section>
     <h2 class="headline text-xs-center py-4">Trening na dziś</h2>
-    <p>
-      {{loads}}
-    </p>
-    <p>
-      {{workout(currentWorkoutId)}}
-    </p>
     <ExcerciseCard class="mb-2 mx-1"
       v-for="excercise in workout(currentWorkoutId).excercises"
-      :key="excercise.id"
+      :key="excercise.excerciseKey"
+      :id="excercise.excerciseKey"
       :name="excercise.name"
       :excerciseKey="excercise.key"
       :series="excercise.series"

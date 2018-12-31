@@ -10,6 +10,14 @@
               <v-list-tile-title>Strona główna</v-list-tile-title>
             </v-list-tile-content>
           </v-list-tile>
+          <v-list-tile @click="$router.push('/info')">
+            <v-list-tile-action>
+              <v-icon>info</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-content>
+              <v-list-tile-title>Info</v-list-tile-title>
+            </v-list-tile-content>
+          </v-list-tile>
           <v-list-tile @click="$router.push('/todays-workout')">
             <v-list-tile-action>
               <v-icon>accessibility</v-icon>

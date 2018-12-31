@@ -23,5 +23,8 @@
     align-items: center;
     /* background: red; */
     height: calc(100vh - 64px);
+    @media screen and (max-width: 500px) {
+      background-position-x: -185px;
+    }
   }
 </style>

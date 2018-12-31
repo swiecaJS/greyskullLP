@@ -3,8 +3,8 @@
     <v-card v-if="!isDone" class="excercise">
       <v-card-title primary-title>
         <div>
-          <h3 class="headline mb-0">{{name}}</h3>
-          <h4 class="subheading mb-0">Obciążenie na dziś: 55kg</h4>
+          <h3 class="headline mb-0">{{name}} {{id}}</h3>
+          <h4 class="subheading mb-0">Obciążenie na dziś: {{incrementedLastResult ? incrementedLastResult : startingLoad.value}} kg</h4>
           <p class="caption">{{ seriesInfo }} </p>
         </div>
       </v-card-title>
@@ -47,11 +47,29 @@
 
 <script>
 export default {
-  props: ['name', 'excerciseKey', 'series', 'seriesInfo', 'lastSeriesAMRAP'],
+  props: ['name', 'excerciseKey', 'series', 'seriesInfo', 'lastSeriesAMRAP', 'id'],
   data () {
     return {
       isDone: false,
       maxRepsDone: undefined
+    }
+  },
+  computed: {
+    startingLoad: {
+      get () {
+        return this.$store.state.startingLoads.find(load => load.id === this.id)
+      }
+    },
+    incrementedLastResult: {
+      get () {
+        const currentExcerciseResults = this.$store.state.results.find(result => result.id === this.id)
+        if (currentExcerciseResults) {
+          const data = currentExcerciseResults.data
+          return data[data.length - 1].load + 1// increment by 1
+        } else {
+          return null
+        }
+      }
     }
   },
   methods: {

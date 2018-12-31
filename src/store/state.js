@@ -1,15 +1,52 @@
 export default {
-  basicLoads: {
-    bench: 55,
-    squat: 50,
-    rows: 1,
-    pullUp: 0,
-    bicep: 15,
-    tricep: 0,
-    deadlift: 65,
-    ohp: 30,
-    facepull: 0
-  },
+  startingLoads: [
+    {
+      id: 'bench',
+      name: 'Wyciskanie leżąc',
+      value: 40
+    },
+    {
+      id: 'squat',
+      name: 'Przysiad',
+      value: 40
+    },
+    {
+      id: 'deadlift',
+      name: 'Martwy ciąg',
+      value: 40
+    },
+    {
+      id: 'ohp',
+      name: 'Wyciskanie nad głową',
+      value: 40
+    },
+    {
+      id: 'rows',
+      name: 'Wiosłowanie sztangą',
+      value: 40
+    },
+    {
+      id: 'pullUp',
+      name: 'Podciąganie',
+      value: 40
+    },
+    {
+      id: 'bicep',
+      name: 'Uginanie sztangi na biceps',
+      value: 40
+    },
+    {
+      id: 'tricep',
+      name: 'Dipsy',
+      value: 40
+    },
+    {
+      id: 'facepull',
+      name: 'Facepulls',
+      value: 40
+    }
+  ],
+  availibleWeights: ['2.5'],
   results: [
     {
       id: 'bench',
@@ -44,6 +81,10 @@ export default {
         {
           reps: 20,
           load: 46
+        },
+        {
+          reps: 16,
+          load: 47.5
         }
       ]
     },
