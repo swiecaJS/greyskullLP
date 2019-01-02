@@ -14,6 +14,9 @@
     name: 'App',
     components: {
       TheNavbar
+    },
+    created () {
+      this.$store.dispatch('getStoredData')
     }
   }
 </script>

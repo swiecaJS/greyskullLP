@@ -63,6 +63,10 @@ export default {
         {
           reps: 20,
           load: 46
+        },
+        {
+          reps: 16,
+          load: 48.5
         }
       ]
     },
@@ -85,6 +89,10 @@ export default {
         {
           reps: 16,
           load: 47.5
+        },
+        {
+          reps: 20,
+          load: 48.5
         }
       ]
     },
@@ -117,7 +125,7 @@ export default {
       ]
     }
   ],
-  currentWorkoutId: 2,
+  currentWorkoutId: 1,
   workouts: [
     {
       id: 1,
