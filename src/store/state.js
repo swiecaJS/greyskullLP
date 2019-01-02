@@ -128,28 +128,32 @@ export default {
           excerciseKey: 'squat',
           lastSeriesAMRAP: true,
           series: ['5', '5'],
-          seriesInfo: '2x5 | 1x5+'
+          seriesInfo: '2x5 | 1x5+',
+          isFinished: false
         },
         {
           name: 'Wyciskanie leżąc',
           excerciseKey: 'bench',
           lastSeriesAMRAP: true,
           series: ['5', '5'],
-          seriesInfo: '2x5 | 1x5+'
+          seriesInfo: '2x5 | 1x5+',
+          isFinished: false
         },
         {
           name: 'Podciąganie',
           excerciseKey: 'pullUp',
           lastSeriesAMRAP: false,
           series: ['8', '8', '8'],
-          seriesInfo: '3x6-8'
+          seriesInfo: '3x6-8',
+          isFinished: false
         },
         {
           name: 'Uginanie sztangi na biceps',
           excerciseKey: 'bicep',
           lastSeriesAMRAP: false,
           series: ['12', '12', '12'],
-          seriesInfo: '3x10-12'
+          seriesInfo: '3x10-12',
+          isFinished: false
         }
       ]
     },
@@ -162,28 +166,32 @@ export default {
           excerciseKey: 'deadlift',
           lastSeriesAMRAP: true,
           series: ['5', '5'],
-          seriesInfo: '2x5 | 1x5+'
+          seriesInfo: '2x5 | 1x5+',
+          isFinished: false
         },
         {
           name: 'Wyciskanie nad głowę sztangi stojąc',
           excerciseKey: 'ohp',
           lastSeriesAMRAP: true,
           series: ['5', '5'],
-          seriesInfo: '2x5 | 1x5+'
+          seriesInfo: '2x5 | 1x5+',
+          isFinished: false
         },
         {
           name: 'Wiosłowanie sztangą',
           excerciseKey: 'rows',
           lastSeriesAMRAP: false,
           series: ['8', '8', '8'],
-          seriesInfo: '3x6-8'
+          seriesInfo: '3x6-8',
+          isFinished: false
         },
         {
           name: 'Dipsy',
           excerciseKey: 'tricep',
           lastSeriesAMRAP: false,
           series: ['8', '8', '8'],
-          seriesInfo: '3x6-8'
+          seriesInfo: '3x6-8',
+          isFinished: false
         }
       ]
     }

@@ -6,7 +6,8 @@
             <h3 class="headline mb-0 text-capitalize">{{name}}</h3>
           </v-flex>
           <v-flex xs1 v-show="isActive">
-            <v-icon class="teal--text">lens</v-icon>
+            <v-icon class="teal--text">beenhere</v-icon>
+            <!-- <v-icon class="teal--text">lens</v-icon> -->
           </v-flex>
         </v-layout>
       </v-card-title>

@@ -1,10 +1,10 @@
 <template>
   <transition name="slide-y-transition" appear>
-    <v-card v-if="!isDone" class="excercise">
+    <v-card v-if="!isFinished" class="excercise">
       <v-card-title primary-title>
         <div>
           <h3 class="headline mb-0">{{name}}</h3>
-          <h4 class="subheading mb-0">Obciążenie na dziś: {{incrementedLastResult ? incrementedLastResult : startingLoad.value}} kg</h4>
+          <h4 class="subheading mb-0">Obciążenie na dziś: {{loadForToday}} kg</h4>
           <p class="caption">{{ seriesInfo }} </p>
         </div>
       </v-card-title>
@@ -44,7 +44,7 @@
 
 <script>
 export default {
-  props: ['name', 'excerciseKey', 'series', 'seriesInfo', 'lastSeriesAMRAP', 'id'],
+  props: ['name', 'series', 'seriesInfo', 'lastSeriesAMRAP', 'id', 'isFinished', 'workoutId'],
   data () {
     return {
       isDone: false,
@@ -67,6 +67,13 @@ export default {
           return null
         }
       }
+    },
+    loadForToday: {
+      get () {
+        return this.incrementedLastResult ? this.incrementedLastResult : this.startingLoad.value
+      },
+      set () {
+      }
     }
   },
   methods: {
@@ -77,8 +84,19 @@ export default {
       // TO DO: update storage
       if (this.lastSeriesAMRAP) {
         console.log('max reps', this.maxRepsDone)
+        this.$store.commit('addResult', {
+          resultsData: {
+            reps: this.maxRepsDone,
+            load: this.loadForToday
+          },
+          excerciseKey: this.id
+        })
       }
       this.isDone = true
+      this.$store.commit('setExcerciseDone', {
+        workoutId: this.workoutId,
+        excerciseKey: this.id
+      })
     }
   }
 }
