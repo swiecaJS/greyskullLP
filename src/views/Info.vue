@@ -22,7 +22,16 @@
     <v-divider></v-divider>
     <p class="mt-2">Jesteś gotowy?</p>
     <v-layout row wrap justify-center align-center class="font-weight-light starting-load">
-      <v-btn @click="$router.push('/settings')" color="info">Przejdź do ustawień</v-btn>
+      <v-btn @click="$router.push('/settings')" color="info"><v-icon class="btn-icon">settings</v-icon>Przejdź do ustawień</v-btn>
+    </v-layout>
+    <v-layout row wrap justify-center align-center class="font-weight-light starting-load">
+      <v-btn @click="$router.push('/overview')" color="success"><v-icon class="btn-icon">today</v-icon>Zobacz plan</v-btn>
     </v-layout>
   </v-container>
 </template>
+
+<style>
+.btn-icon {
+  margin-right: 10px;
+}
+</style>

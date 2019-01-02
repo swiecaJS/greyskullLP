@@ -7,6 +7,7 @@
     :id="workout.id"
     :name="workout.name"
     :excercises="workout.excercises"
+    :isActive="isWorkoutActive(workout.id)"
   />
 </v-container>
 
@@ -24,6 +25,11 @@
         workouts: 'workouts',
         currentWorkoutId: 'currentWorkoutId'
       })
+    },
+    methods: {
+      isWorkoutActive (id) {
+        return id === this.currentWorkoutId
+      }
     }
   }
 </script>
