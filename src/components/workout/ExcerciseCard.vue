@@ -3,7 +3,7 @@
     <v-card v-if="!isDone" class="excercise">
       <v-card-title primary-title>
         <div>
-          <h3 class="headline mb-0">{{name}} {{id}}</h3>
+          <h3 class="headline mb-0">{{name}}</h3>
           <h4 class="subheading mb-0">Obciążenie na dziś: {{incrementedLastResult ? incrementedLastResult : startingLoad.value}} kg</h4>
           <p class="caption">{{ seriesInfo }} </p>
         </div>
@@ -30,9 +30,6 @@
               <li v-for="(serie, index) in series" :key="index">
                 {{serie}}
               </li>
-              <!-- <li v-if="lastSeriesAMRAP">
-                5+
-              </li> -->
               <input v-if="lastSeriesAMRAP" v-model='maxRepsDone' placeholder="?" type="text" name="" id="seriesInput">
             </ul>
           </v-list-tile-content>

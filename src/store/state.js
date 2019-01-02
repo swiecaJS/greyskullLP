@@ -117,7 +117,7 @@ export default {
       ]
     }
   ],
-  currentWorkoutId: 1,
+  currentWorkoutId: 2,
   workouts: [
     {
       id: 1,
@@ -150,6 +150,40 @@ export default {
           lastSeriesAMRAP: false,
           series: ['12', '12', '12'],
           seriesInfo: '3x10-12'
+        }
+      ]
+    },
+    {
+      id: 2,
+      name: 'tydzień A trening B',
+      excercises: [
+        {
+          name: 'Martwy ciag',
+          excerciseKey: 'deadlift',
+          lastSeriesAMRAP: true,
+          series: ['5', '5'],
+          seriesInfo: '2x5 | 1x5+'
+        },
+        {
+          name: 'Wyciskanie nad głowę sztangi stojąc',
+          excerciseKey: 'ohp',
+          lastSeriesAMRAP: true,
+          series: ['5', '5'],
+          seriesInfo: '2x5 | 1x5+'
+        },
+        {
+          name: 'Wiosłowanie sztangą',
+          excerciseKey: 'rows',
+          lastSeriesAMRAP: false,
+          series: ['8', '8', '8'],
+          seriesInfo: '3x6-8'
+        },
+        {
+          name: 'Dipsy',
+          excerciseKey: 'tricep',
+          lastSeriesAMRAP: false,
+          series: ['8', '8', '8'],
+          seriesInfo: '3x6-8'
         }
       ]
     }
