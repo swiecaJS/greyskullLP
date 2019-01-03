@@ -2,11 +2,23 @@
   <transition name="slide-y-transition" appear>
     <v-card v-if="!isFinished" class="excercise">
       <v-card-title primary-title>
-        <div>
+        <v-layout column>
           <h3 class="headline mb-0">{{name}}</h3>
-          <h4 class="subheading mb-0">Obciążenie na dziś: {{loadForToday}} kg</h4>
-          <p class="caption">{{ seriesInfo }} </p>
-        </div>
+          <p class="caption ma-0">{{ seriesInfo }} </p>
+          <v-layout row justify-space-between align-center class="mt-2">
+            <v-flex xs9>
+              <h3 class="subheading mb-0">Obciążenie na dziś: {{loadForToday}} kg</h3>
+            </v-flex>
+            <v-flex xs3>
+              <ChangeWeightModal 
+                :currentLoad="loadForToday"
+                :name="name"
+                :excerciseKey="id"
+                @loadForTodayChanged="userInputLoad = $event"
+              />
+            </v-flex>
+          </v-layout>
+        </v-layout>
       </v-card-title>
       <v-list>
         <v-list-tile>
@@ -43,12 +55,16 @@
 </template>
 
 <script>
+import ChangeWeightModal from './ChangeWeightModal.vue'
 export default {
   props: ['name', 'series', 'seriesInfo', 'lastSeriesAMRAP', 'id', 'isFinished', 'workoutId'],
+  components: {
+    ChangeWeightModal
+  },
   data () {
     return {
-      isDone: false,
-      maxRepsDone: undefined
+      maxRepsDone: undefined,
+      userInputLoad: null
     }
   },
   computed: {
@@ -70,9 +86,14 @@ export default {
     },
     loadForToday: {
       get () {
-        return this.incrementedLastResult ? this.incrementedLastResult : this.startingLoad.value
+        if (this.userInputLoad) {
+          return this.userInputLoad
+        } else {
+          return this.incrementedLastResult ? this.incrementedLastResult : this.startingLoad.value
+        }
       },
-      set () {
+      set (value) {
+        console.log('loadForToday setter' , value)
       }
     }
   },
@@ -81,7 +102,6 @@ export default {
       console.log('onSeriesUpdate', value, a)
     },
     onExcerciseDone () {
-      // TO DO: update storage
       if (this.lastSeriesAMRAP) {
         console.log('max reps', this.maxRepsDone)
         this.$store.commit('addResult', {
@@ -92,7 +112,7 @@ export default {
           excerciseKey: this.id
         })
       }
-      this.isDone = true
+      // TO DO: increment excercise counter
       this.$store.commit('setExcerciseDone', {
         workoutId: this.workoutId,
         excerciseKey: this.id

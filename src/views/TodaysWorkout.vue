@@ -1,6 +1,7 @@
 <template>
   <section>
-    <h2 class="headline text-xs-center py-4">Trening na dziś</h2>
+    <h2 class="headline text-xs-center pt-4">Trening na dziś</h2>
+    <p v-show="!areAllExcercisesDone" class="text-xs-center body-1">Uzupełnij ilość powtórzeń w serii AMRAP</p>
     <WorkoutEndedCard v-show="areAllExcercisesDone" />
     <ExcerciseCard class="mb-2 mx-1"
       v-for="excercise in workout(currentWorkoutId).excercises"

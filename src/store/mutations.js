@@ -22,5 +22,9 @@ export default {
   addResult (state, { excerciseKey, resultsData }) {
     state.results.find(result => result.id === excerciseKey).data.push(resultsData)
     window.localStorage.setItem('greyskullResults', JSON.stringify(state.results))
+  },
+  clearResults (state) {
+    state.results = [{ 'id': 'bench', 'name': 'Wyciskanie leżąc', 'data': [] }, { 'id': 'squat', 'name': 'Przysiad', 'data': [] }, { 'id': 'deadlift', 'name': 'Martwy ciąg', 'data': [] }, { 'id': 'ohp', 'name': 'Wyciskanie żołnierskie', 'data': [] }]
+    window.localStorage.setItem('greyskullResults', JSON.stringify(state.results))
   }
 }

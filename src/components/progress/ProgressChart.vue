@@ -108,5 +108,6 @@ export default {
 <style scoped>
   .chart-wrapper {
     height: 400px;
+    max-width: calc(100% - 16px);
   }
 </style>

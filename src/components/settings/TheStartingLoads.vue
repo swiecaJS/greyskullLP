@@ -19,9 +19,9 @@ export default {
   computed: {
     startingLoadSorted () {
       console.log('startingLoads', this.startingLoads)
-      const loads = this.startingLoads 
+      const loads = this.startingLoads
       return loads.sort((a, b) => {
-        if(a.name > b.name) {
+        if (a.name > b.name) {
           return 1
         }
         if (a.name < b.name) {

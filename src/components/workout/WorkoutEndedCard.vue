@@ -1,6 +1,6 @@
 <template>
   <transition name="slide-y-transition" appear>
-    <v-card v-if="!isFinished" class="ma-2">
+    <v-card class="ma-2">
       <v-card-title primary-title>
         <v-layout row justify-space-between align-center>
           <v-flex xs10>

@@ -59,12 +59,7 @@
         </v-toolbar-title>
       </router-link>
       <v-spacer></v-spacer>
-      <router-link to="/about" class="no-effects hidden-sm-and-down">
-        <v-btn flat>
-          <span class="mr-2">About</span>
-        </v-btn>
-      </router-link>
-      <v-toolbar-side-icon @click.stop="drawer = !drawer" class="hidden-md-and-up"></v-toolbar-side-icon>
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
     </v-toolbar>
   </section>
 </template>

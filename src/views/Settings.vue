@@ -10,6 +10,8 @@
     <v-layout row wrap justify-center align-center class="font-weight-light starting-load mt-4">
       <v-btn @click="$router.push('/todays-workout')" color="success">Zacznij trening</v-btn>
     </v-layout>
+    <v-divider></v-divider>
+    <ClearStorage />
   </v-container>
 </template>
 
@@ -17,6 +19,7 @@
 import { mapState } from 'vuex'
 // import TheAvailibleWeights from '../components/settings/TheAvailibleWeights.vue'
 import TheStartingLoads from '../components/settings/TheStartingLoads.vue'
+import ClearStorage from '../components/settings/ClearStorage.vue'
 export default {
   computed: {
     ...mapState({
@@ -25,7 +28,8 @@ export default {
   },
   components: {
     // TheAvailibleWeights,
-    TheStartingLoads
+    TheStartingLoads,
+    ClearStorage
   }
 }
 </script>
