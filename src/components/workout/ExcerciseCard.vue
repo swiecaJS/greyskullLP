@@ -1,21 +1,17 @@
 <template>
-  <transition name="slide-y-transition" appear>
+  <v-flex xs12 lg5>
+    <transition name="slide-y-transition" appear>
     <v-card v-if="!isFinished" class="excercise">
       <v-card-title primary-title>
         <v-layout column>
           <h3 class="headline mb-0">{{name}}</h3>
           <p class="caption ma-0">{{ seriesInfo }} </p>
           <v-layout row justify-space-between align-center class="mt-2">
-            <v-flex xs9>
+            <v-flex xs9 lg11>
               <h3 class="subheading mb-0">Obciążenie na dziś: {{loadForToday}} kg</h3>
             </v-flex>
-            <v-flex xs3>
-              <ChangeWeightModal 
-                :currentLoad="loadForToday"
-                :name="name"
-                :excerciseKey="id"
-                @loadForTodayChanged="userInputLoad = $event"
-              />
+            <v-flex xs3 lg1>
+              <ChangeWeightModal :currentLoad="loadForToday" :name="name" :excerciseKey="id" @loadForTodayChanged="userInputLoad = $event" />
             </v-flex>
           </v-layout>
         </v-layout>
@@ -51,7 +47,8 @@
         <v-btn @click="onExcerciseDone" flat color="primary">zrobione</v-btn>
       </v-card-actions>
     </v-card>
-  </transition>
+    </transition>
+    </v-flex>
 </template>
 
 <script>

@@ -1,20 +1,22 @@
 <template>
-  <section>
+  <v-container>
     <h2 class="headline text-xs-center pt-4">Trening na dziś</h2>
     <p v-show="!areAllExcercisesDone" class="text-xs-center body-1">Uzupełnij ilość powtórzeń w serii AMRAP</p>
     <WorkoutEndedCard v-show="areAllExcercisesDone" />
-    <ExcerciseCard class="mb-2 mx-1"
-      v-for="excercise in workout(currentWorkoutId).excercises"
-      :key="excercise.excerciseKey"
-      :id="excercise.excerciseKey"
-      :name="excercise.name"
-      :series="excercise.series"
-      :seriesInfo="excercise.seriesInfo"
-      :isFinished="excercise.isFinished"
-      :lastSeriesAMRAP="excercise.lastSeriesAMRAP"
-      :workoutId="currentWorkoutId"
-    />
-  </section>
+    <v-layout row wrap justify-center>
+      <ExcerciseCard class="mb-2 mx-1"
+        v-for="excercise in workout(currentWorkoutId).excercises"
+        :key="excercise.excerciseKey"
+        :id="excercise.excerciseKey"
+        :name="excercise.name"
+        :series="excercise.series"
+        :seriesInfo="excercise.seriesInfo"
+        :isFinished="excercise.isFinished"
+        :lastSeriesAMRAP="excercise.lastSeriesAMRAP"
+        :workoutId="currentWorkoutId"
+      />
+    </v-layout>
+  </v-container>
 </template>
 
 <script>

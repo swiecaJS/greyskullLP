@@ -1,5 +1,6 @@
 <template>
-    <v-card class="mb-2 elevation-2" :class="{'elevation-8': isActive}">
+  <v-flex xs12 md6 lg4>
+    <v-card class="ma-2 elevation-2 card" :class="{'elevation-8': isActive}">
       <v-card-title primary-title>
         <v-layout row justify-space-between align-center>
           <v-flex xs10>
@@ -7,7 +8,6 @@
           </v-flex>
           <v-flex xs1 v-show="isActive">
             <v-icon class="teal--text">beenhere</v-icon>
-            <!-- <v-icon class="teal--text">lens</v-icon> -->
           </v-flex>
         </v-layout>
       </v-card-title>
@@ -32,6 +32,7 @@
         <v-btn v-else @click="$router.push('/todays-workout')" flat color="primary">Rozpocznij trening</v-btn>
       </v-card-actions>
     </v-card>
+  </v-flex>
 </template>
 
 
